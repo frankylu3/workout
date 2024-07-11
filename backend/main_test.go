@@ -113,7 +113,7 @@ func TestCreateExercise(t *testing.T) {
 					So(createdExercise.ID, ShouldNotBeEmpty)
 				})
 			})
-			Convey("And a name is not givne", func() {
+			Convey("And a name is not given", func() {
 				exercise.Name = ""
 				body, _ := json.Marshal(exercise)
 				req, _ := http.NewRequest("POST", "/exercises", bytes.NewBuffer(body))
